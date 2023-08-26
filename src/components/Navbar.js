@@ -1,11 +1,24 @@
-import React from 'react'
-import searchimage from '../components/searchimage.png'
-import logo from '../components/logo.jpg'
+import React,{useState} from 'react'
+import searchimage from '../components/images/searchimage.png'
+import logo from '../components/images/logo.jpg';
 import './style.css'
-export default function () {
+export default function Navbar() {
+  const [scrollPage,setScrollPage]=useState(false);
+  const fixNav=()=>
+  {
+    if(window.scrollY>50)
+    {
+      setScrollPage(true);
+    }
+    else{
+      setScrollPage(false);
+    }
+  }
+  window.addEventListener("scroll",fixNav);
+
   return (
     <>
-    <div>
+    <header className={`${scrollPage ? 'fixed' : ''}`}>
       <nav className='mainnav'>
         <img src={logo} alt='mylogo'></img>
           <div>
@@ -21,7 +34,7 @@ export default function () {
           </div>
         
       </nav>
-    </div>
+    </header>
     
     
       </>
