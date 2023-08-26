@@ -6,9 +6,10 @@
 }
 :root
 {
-    --primary-text-color:rgba(0, 251, 255, 0.18);
+    --primary-text-color:rgb(0, 251, 255);
 }
-.mainnav{
+.mainnav
+{
  display: flex;
  justify-content: center;
  align-items: center;
@@ -21,11 +22,20 @@
  background-color: var(--primary-text-color);
  overflow: hidden;
  }
-.mainnav img{
+ .fixed
+ {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+ }
+.mainnav img
+{
     height: 30px;
     width:40px;
 }
-ul{
+ul
+{
     list-style: none;
 }
 .nav-items
@@ -34,7 +44,6 @@ ul{
     justify-content:space-between;
     align-items: center;
     gap:5rem;
-    
 }
 .search
 {
@@ -42,7 +51,8 @@ ul{
     justify-content:center;
     align-items: center;
 }
-.search img{
+.search img
+{
     height: 1.3rem;
     width:1.3rem;
     background-color: antiquewhite;
@@ -56,9 +66,9 @@ ul{
     text-align: center;
     border: none;
     margin-left: 1px;
-
 }
-:hover{
+:hover
+{
     --secondary-text-color:blue;
 }
 .onhover:hover
@@ -66,7 +76,8 @@ ul{
     cursor:pointer ;
     color: var(--secondary-text-color);
 }
-.onhover:active{
+.onhover:active
+{
     color:#008000;
 }
 main
@@ -93,7 +104,8 @@ main
     overflow: hidden;
     transition: all 0.3s ease;
 }
-.card:hover{
+.card:hover
+{
     background-color: rgba(0, 0, 255, 0.315);
     transform: translateY(-2px);
 }
